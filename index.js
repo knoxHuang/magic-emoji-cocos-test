@@ -32,6 +32,8 @@ System.register(["./application.js"], function (_export, _context) {
         console.timeEnd('phase start engine');
         console.timeEnd('total time');
 
+        const time = Date.now() - totalTime;
+
         const canvas = document.createElement('canvas')
         canvas.style.position = 'absolute';
         const ctx = canvas.getContext('2d');
@@ -39,7 +41,7 @@ System.register(["./application.js"], function (_export, _context) {
 
         ctx.font = '20px Arial';
         ctx.fillStyle = 'red';
-        ctx.fillText(Date.now() - totalTime, 50, 50);
+        ctx.fillText(time, 50, 50);
       });
     }
   };
