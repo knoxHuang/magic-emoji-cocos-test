@@ -1,6 +1,7 @@
 System.register(["./application.js"], function (_export, _context) {
   "use strict";
 
+  const totalTime = Date.now();
   console.time('total time');
 
   var Application, canvas, $p, bcr, application;
@@ -30,6 +31,15 @@ System.register(["./application.js"], function (_export, _context) {
       }).then(function () {
         console.timeEnd('phase start engine');
         console.timeEnd('total time');
+
+        const canvas = document.createElement('canvas')
+        canvas.style.position = 'absolute';
+        const ctx = canvas.getContext('2d');
+        document.body.appendChild(canvas);
+
+        ctx.font = '20px Arial';
+        ctx.fillStyle = 'red';
+        ctx.fillText(Date.now() - totalTime, 50, 50);
       });
     }
   };
