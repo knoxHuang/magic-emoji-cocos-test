@@ -1,7 +1,7 @@
 System.register([], function (_export, _context) {
   "use strict";
 
-  var cc, rootURL, prefixServer, autoLoadEmoji, cullingFireworks, rabbitJumpToRibben, replaceFirework, Application;
+  var cc, Application;
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
 
@@ -12,18 +12,11 @@ System.register([], function (_export, _context) {
   return {
     setters: [],
     execute: function () {
-      rootURL = '';
-      prefixServer = '';
-      autoLoadEmoji = false;
-      cullingFireworks = false;
-      rabbitJumpToRibben = false;
-      replaceFirework = false;
-
       _export("Application", Application = /*#__PURE__*/function () {
         function Application() {
           _classCallCheck(this, Application);
 
-          this.settingsPath = rootURL + 'src/settings.json';
+          this.settingsPath = 'src/settings.json';
           this.showFPS = false;
         }
 
@@ -55,17 +48,6 @@ System.register([], function (_export, _context) {
                 // }
                 profiling: {
                   showFPS: this.showFPS
-                },
-                custom: {
-                  rootURL: rootURL,
-                  prefixServer: prefixServer,
-                  autoLoadEmoji: autoLoadEmoji,
-                  cullingFireworks: cullingFireworks,
-                  rabbitJumpToRibben: rabbitJumpToRibben,
-                  replaceFirework: replaceFirework
-                },
-                screen: {
-                  overrideDpr: this.overrideDpr
                 }
               }
             }).then(function () {
