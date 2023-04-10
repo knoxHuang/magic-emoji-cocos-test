@@ -29,10 +29,9 @@ System.register(["./application.js"], function (_export, _context) {
         console.time('phase start engine');
         return application.start();
       }).then(function () {
+        const time = Date.now() - totalTime;
         console.timeEnd('phase start engine');
         console.timeEnd('total time');
-
-        const time = Date.now() - totalTime;
 
         const canvas = document.createElement('canvas')
         canvas.style.position = 'absolute';
