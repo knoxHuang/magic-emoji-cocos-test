@@ -1,7 +1,7 @@
-System.register("chunks:///Ribben.js",[],(function(){"use strict";return{execute:function(){}}}));
+System.register("chunks:///_virtual/Ribben",[],(function(){"use strict";return{execute:function(){}}}));
 
 (function(r) {
-  r('virtual:///prerequisite-imports/Ribben', 'chunks:///Ribben.js'); 
+  r('virtual:///prerequisite-imports/Ribben', 'chunks:///_virtual/Ribben'); 
 })(function(mid, cid) {
     System.register(mid, [cid], function (_export, _context) {
     return {
